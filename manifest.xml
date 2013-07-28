@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "ext-1.0.dtd">
+
+<!--
+/**
+ * Hide forum moderators on the forum list display
+ *
+ * @copyright Copyright (C) 2009 SiCo
+ * @package sico_hide_moderators
+ */
+-->
+
+<extension engine="1.0">
+	<id>sico_hide_moderators</id>
+	<title>Hide Moderators</title>
+	<version>1.0.0</version>
+	<description>Hides the list of forum moderators on the forum page.</description>
+	<author>Simon Corless</author>
+	<minversion>1.3</minversion>
+	<maxtestedon>1.3.2</maxtestedon>
+
+	<hooks>
+
+		<hook id="in_normal_row_pre_item_title_merge"><![CDATA[
+
+			$cur_forum['moderators'] = '';
+		
+		]]></hook>
+
+	</hooks>
+
+</extension>
